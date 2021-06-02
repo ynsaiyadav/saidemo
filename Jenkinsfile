@@ -10,10 +10,10 @@ pipeline {
             steps {
                 sh 'mvn --version'
             }
-            stage('archive'){
-                steps{
-                    archiveArtifacts artifacts: 'project/target/*.war', followSymlinks: false
-                }
+        }
+        stage('archive'){
+            steps{
+                archiveArtifacts artifacts: 'project/target/*.war', followSymlinks: false
             }
         }
     }
