@@ -13,7 +13,7 @@ pipeline {
         }
         stage('archive'){
             steps{
-                archiveArtifacts artifacts: 'project/target/*.war', followSymlinks: false
+                archiveArtifacts artifacts: 'Workspace/project/target/*.war', followSymlinks: false
             }
         }
     }
